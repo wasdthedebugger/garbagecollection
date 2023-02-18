@@ -29,7 +29,7 @@
                 </ul>
             </div>
         </nav>
-        <main>
+        <main id="main-section">
             <div class="hero-text">
                 <h1><span>Garbage</span> Collection Agency</h1>
                 <p>We remove <span>litter</span> with joy</p>
@@ -134,6 +134,16 @@
         </div>
     </section>
 
+    <div id="payment-div">
+        <form action="#" class="payment-form">
+            <label for="username">Your Name</label>
+            <input type="text" name="username" id="">
+            <label for="amount">Enter Amount</label>
+            <input type="number" name="amount" id="">
+            <input type="submit" value="Confirm Payment">
+        </form>
+    </div>
+
     <!-- footer section goes here  -->
     <footer>
         <p>Copyright @ 2023 All Rights Reserved : By Garbage Collection Agency</p>
@@ -145,5 +155,10 @@
     <!-- javascript link goes here  -->
     <script src="main.js"></script>
 </body>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+  </script>
 
 </html>
