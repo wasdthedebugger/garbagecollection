@@ -120,6 +120,7 @@ main{
 }
 main .hero-text h1{
     font-size: 1.8rem;
+    color: white;
 }
 main .hero-text h1 span{
     color: var(--primary);
