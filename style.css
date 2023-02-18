@@ -1,196 +1,341 @@
 /* google font link goes here  */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Tangerine:wght@400;700&family=The+Nautigal:wght@400;700&family=Ubuntu:wght@400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Tangerine:wght@400;700&family=The+Nautigal:wght@400;700&family=Ubuntu:wght@400;500;700&display=swap');
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 /* creating variables  */
-:root {
-  --primary: rgb(13, 104, 13);
-  --secondary: rgb(109, 192, 109);
-  --white: #fff;
-  --black: #000;
-  --clr1: rgb(250, 254, 0);
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+:root{
+    --primary: rgb(13, 104, 13);
+    --secondary: rgb(46, 46, 46);
+    --white: #fff;
+    --black: #000000;
+    --clr1: rgb(194, 255, 195);
 }
 
 /* common styling goes here  */
-section {
-  width: 100vw;
-  height: 100vh;
+section{
+    width: 100vw;
+    height: 100vh;
 }
-.max-width {
-  width: 100%;
-  padding: 0 50px;
+.max-width{
+    width: 100%;
+    padding: 0 50px;
+}
+section h1{
+    color: var(--white);
+    text-align: center;
+    padding: 10px 0;
+}
+button{
+    outline: none;
+    border: none;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: var(--primary);
+    color: var(--white);
+    font-size: 1.2rem;
+    letter-spacing: 1.1px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+button:hover{
+    background-color: var(--white);
+    color: var(--primary);
+    box-shadow: 0 0 10px var(--primary);
 }
 
 /* header section styling starts here  */
 /* nav section styling starts here  */
-nav {
-  width: 100%;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: var(--primary);
-  padding: 0 30px;
-  position: relative;
+nav{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--primary);
+    padding: 0 30px;
+    position: fixed;
 }
-#menu {
-  color: var(--white);
-  font-size: 1.7rem;
-  display: none;
-  position: fixed;
-  right: 20px;
+#menu{
+    color: var(--white);
+    font-size: 1.7rem;
+    display: none;
+    position: fixed;
+    right: 20px;
 }
-nav .logo h1 {
-  color: var(--white);
-  letter-spacing: 1.2px;
-  font-size: 1.6rem;
-  cursor: pointer;
+nav .logo h1{
+    color: var(--white);
+    letter-spacing: 1.2px;
+    font-size: 1.6rem;
+    cursor: pointer;
 }
-nav .logo h1 span {
-  color: var(--clr1);
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  align-items: center;
-}
-nav ul li {
-  display: block;
-  height: 60px;
-  margin-left: 10px;
-  line-height: 60px;
-  padding: 0 20px;
-  transition: all 0.5s ease;
-}
-#active {
-  background-color: var(--black);
+nav .logo h1 span{
+    color: var(--clr1);
 }
 
-nav ul li:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+nav ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
 }
-nav ul li a {
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: var(--white);
+nav ul li{
+    display: block;
+    height: 60px;
+    margin-left: 10px;
+    line-height: 60px;
+    padding: 0 20px;
+    transition: all 0.5s ease;
+}
+#active{
+    background-color: var(--black);
+}
+
+nav ul li:hover{
+    background-color: black;
+}
+nav ul li a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--white);
 }
 
 /* main section styling starts here  */
-main {
-  width: 100%;
-  height: calc(100vh - 60px);
-  padding: 0 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image: url('assets/images/bg1.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  animation: bgchange 10s infinite forwards alternate;
+main{
+    width: 100%;
+    height: calc(100vh - 60px);
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
-main .hero-text h1 {
-  font-size: 1.8rem;
+main .hero-text h1{
+    font-size: 1.8rem;
 }
-main .hero-text h1 span {
-  color: var(--primary);
+main .hero-text h1 span{
+    color: var(--primary);
 }
-main p {
-  font-size: 1.2rem;
-  font-weight: 700;
+main p{
+    font-size: 1.2rem;
+    font-weight: 700;
 }
-main p span {
-  color: var(--primary);
-}
-main button {
-  outline: none;
-  border: none;
-  margin-top: 10px;
-  padding: 5px 10px;
-  background-color: var(--primary);
-  color: var(--white);
-  font-size: 1.2rem;
-  letter-spacing: 1.1px;
-  cursor: pointer;
-}
-main button:hover {
-  background-color: var(--white);
-  color: var(--primary);
-  box-shadow: 0 0 10px var(--primary);
+main p span{
+    color: var(--primary);
 }
 
 /* about section styling starts here  */
-
-/* code for responsive web desingn */
-@media screen and (max-width: 768px) {
-  nav {
+.about{
+    background-color: var(--secondary);
+}
+.about .about-container{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: 0 auto;
+}
+.about .top, .about .down{
     width: 100%;
-    transition: all 0.5s ease;
-  }
-  nav .logo {
-    width: 0;
-  }
-  nav .logo h1 {
-    /* display: none; */
-  }
-  nav ul {
+    height: 50vh;
+    display: flex;
+    gap: 20px;
+}
+.about p{
+    color: var(--white);
+    text-align: justify;
+    font-size: 0.9rem;
+
+}
+.about img{
+    width: 200px;
+    height: 200px;
+}
+
+/* .services{
+    margin-bottom: 100px;
+} */
+
+/* service section styling starts here  */
+.services h1{
+    color: var(--primary);
+}
+.services .service-container{
     width: 100%;
     height: 100vh;
     display: flex;
+    flex-wrap: wrap;
+    height: 90vh;
+    gap: 10px;
+}
+.services .service-box{
+    margin: 0 auto;
+    width: 32%;
+    background: var(--clr1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+.services .service-box i{
+    color: var(--primary);
+    font-size: 5rem;
+    padding-top: 15px;
+}
+.services .service-box:hover{
+    box-shadow: 0 0 10px var(--secondary);
+}
+.services .service-box h2{
+    color: var(--primary);
+    font-size: 1.3rem;
+}
+.services .service-box p{
+    text-align: justify;
+    width: 80%;
+
+}
+
+
+/* team section styling begins here  */
+.team{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    background-color: var(--secondary);
+    height: 75vh;
+}
+.team .container{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+.team .container .card{
+    background: var(--clr1);
+    display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 20px;
     align-items: center;
-    position: absolute;
-    top: -500px;
-    left: 0;
-    padding: 0 auto;
-    transition: all 0.5s ease;
-  }
-
-  nav ul li {
-    width: 100%;
-    text-align: center;
-    /* background-color: blue; */
-  }
-  nav ul li {
-    /* position: absolute; */
-    display: block;
-  }
-  #menu {
-    display: block;
     cursor: pointer;
-    /* position: absolute; */
-    top: 20px;
-    right: 20px;
-  }
+    border: 1px solid var(--white);
+    transition: all 0.5s ease;
+}
+.team .container .card:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 15px var(--primary);
+}
+.team .container .card img{
+    height: 200px;
+    width: 100%;
 }
 
-.body {
-  background-color: blue;
+.card h2{
+    color: var(--primary);
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 1.2px;
+    font-weight: 500;
+}
+.card p{
+    text-align: justify;
+    width: 80%;
 }
 
-@keyframes bgchange {
-  0% {
-    background-image: url("assets/images/bg1.png");
-  }
-  25% {
-    background-image: url("assets/images/bg2.png");
-  }
-  50% {
-    background-image: url("assets/images/bg3.png");
-  }
-  75% {
-    background-image: url("assets/images/bg4.png");
-  }
-  100% {
-    background-image: url("assets/images/bg5.png");
-  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* code for responsive web desingn */
+@media screen and (max-width:768px){
+    nav{
+        width: 100%;
+        transition: all 0.5s ease;
+
+    }
+    .bg{
+        background-color: ;
+    }
+    nav .logo{
+        width: 0;
+    }
+    nav .logo h1{
+        /* display: none; */
+    }
+    nav ul{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        align-items: center;
+        position: absolute;
+        top: -500px;
+        left: 0;
+        padding: 0 auto;
+        transition: all 0.5s ease;
+    }
+    
+    nav ul li{
+        width: 100%;
+        text-align: center;
+        /* background-color: blue; */
+    }
+    nav ul li{
+        /* position: absolute; */
+        display: block;
+    }
+    #menu{
+        display: block;
+        cursor: pointer;
+        /* position: absolute; */
+        top: 20px;
+        right: 20px;
+    }
+}
+
+#main-section{
+    background-size: cover;
+    background-position: center;
+    animation: bgchange 10s infinite forwards alternate;
+}
+
+.body{
+    background-color: blue;
+}
+
+
+@keyframes bgchange{
+    0%{
+        background-image: url("assets/images/bg1.png");
+    }
+    25%{
+        background-image: url("assets/images/bg2.png");
+    }
+    50%{
+        background-image: url("assets/images/bg3.png");
+    }
+    75%{
+        background-image: url("assets/images/bg4.png");
+    }
+    100%{
+        background-image: url("assets/images/bg5.png");
+    }
 }
